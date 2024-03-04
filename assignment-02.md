@@ -1,6 +1,6 @@
 # CMPS 2200 Assignment 2
 
-**Name:**_________________________
+**Name:** Gabby Reese
 
 In this assignment we'll work on applying the methods we've learned to analyze recurrences, and also see their behavior
 in practice. As with previous
@@ -12,74 +12,79 @@ and push to your github repository.
 
 1. Derive asymptotic upper bounds of work for each recurrence below.
   * $W(n)=2W(n/3)+1$
-.  
+.  O(n^(log_3(2))) =  O(log_3(n))
 .  
 .  
 .  
 .  
   * $W(n)=5W(n/4)+n$
-.  
+.  O(5^(log_4(n))) = O(n^log_4(5))
 .  
 .  
 .  
 .  
   * $W(n)=7W(n/7)+n$
-.  
-.  
+.  O(n(log_7(n))
+. 
 .  
 .  
 .  
   * $W(n)=9W(n/3)+n^2$
-.  
+.  O(n^2log_3(n))
 .  
 .  
 .  
 .  
   * $W(n)=8W(n/2)+n^3$
-.  
+.  O(n^3log_2(n))
 .  
 .  
 .  
 .  
   * $W(n)=49W(n/25)+n^{3/2}\log n$
-.  
+.  O(n^3/2*log(n))
 .  
 .  
 .  
 .  
   * $W(n)=W(n-1)+2$
-.  
+.  O(n) 
 .  
 .  
 .  
 .  
   * $W(n)= W(n-1)+n^c$, with $c\geq 1$
-.  
+.  O(n^c+1)
 .  
 .  
 .  
 .  
   * $W(n)=W(\sqrt{n})+1$
 
+    O(logn)
 
 2. Suppose that for a given task you are choosing between the following three algorithms:
 
   * Algorithm $\mathcal{A}$ solves problems by dividing them into
       five subproblems of half the size, recursively solving each
       subproblem, and then combining the solutions in linear time.
+    W(n) = 5W(n/2) + O(n)
     
   * Algorithm $\mathcal{B}$ solves problems of size $n$ by
       recursively solving two subproblems of size $n-1$ and then
       combining the solutions in constant time.
+    W(n) = 2W(n-1) + O(1)
     
   * Algorithm $\mathcal{C}$ solves problems of size $n$ by dividing
       them into nine subproblems of size $n/3$, recursively solving
       each subproblem, and then combining the solutions in $O(n^2)$
       time.
-
+    W(n) = 9W(n/3) + O(n^2)
+    
     What are the asymptotic running times of each of these algorithms?
     Which algorithm would you choose?
 
+A: I would chose the first algorithm because it has the smallest growth rate and the most efficient run time.
 
 3. Now that you have some practice solving recurrences, let's work on
   implementing some algorithms. In lecture we discussed a divide and
